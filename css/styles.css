@@ -14,7 +14,7 @@
   --hero-btn-bgr-color: #4d5ae5;
   --hero-btn-bgr-color-hover-focus: #404bbf;
 
-  --adventages-icon-bgr-color: #F4F4FD;
+  --adventages-icon-bgr-color: #f4f4fd;
 
   --item-title-color: #2e2f42;
 
@@ -248,14 +248,14 @@ body {
   width: 264px;
 }
 
-.section-adventages-icon-box{
+.section-adventages-icon-box {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 112px;
   background-color: var(--adventages-icon-bgr-color);
   border-radius: 4px;
-} 
+}
 
 .section-adventages-item-title {
   margin-top: 8px;
@@ -292,6 +292,28 @@ body {
 
 .section-team-item-title {
   color: var(--item-title-color);
+}
+
+.section-team-icon-list {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.section-team-icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: #4d5ae5;
+  border-radius: 50%;
+}
+
+.section-team-icon-link:hover,
+.section-team-icon-link:focus {
+  background: #404BBF;
 }
 
 /* --------------- CUSTOMERS --------------- */
