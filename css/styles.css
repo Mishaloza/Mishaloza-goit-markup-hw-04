@@ -14,6 +14,8 @@
   --hero-btn-bgr-color: #4d5ae5;
   --hero-btn-bgr-color-hover-focus: #404bbf;
 
+  --adventages-icon-bgr-color: #F4F4FD;
+
   --item-title-color: #2e2f42;
 
   --section-team-bgr-color: #f4f4fd;
@@ -246,33 +248,14 @@ body {
   width: 264px;
 }
 
-.section-adventages-item::before {
-  content: "";
-  display: block;
+.section-adventages-icon-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 112px;
-  background: #f4f4fd;
+  background-color: var(--adventages-icon-bgr-color);
   border-radius: 4px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-/* /////////////////////////////// ADD ICON!!!!!!!!!!!!!!!!!!!/////////////////// */
-.icon-antena::before {
-  background-image: url("../");
-}
-
-.icon-clock::before {
-  background-image: url("../");
-}
-
-.icon-laptop::before {
-  background-image: url("../");
-}
-
-.icon-astronaut::before {
-  background-image: url("../");
-}
+} 
 
 .section-adventages-item-title {
   margin-top: 8px;
