@@ -13,12 +13,20 @@
   --hero-btn-content-color: #ffffff;
   --hero-btn-bgr-color: #4d5ae5;
   --hero-btn-bgr-color-hover-focus: #404bbf;
+  --hero-btn-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  --hero-lineral-gradient: linear-gradient(
+    to right,
+    rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)
+  );
 
   --adventages-icon-bgr-color: #f4f4fd;
 
   --item-title-color: #2e2f42;
 
   --section-team-bgr-color: #f4f4fd;
+  --team-item-box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   --team-item-bgr-color: #ffffff;
   --team-icon-bgr-color: #4d5ae5;
   --team-icon-bgr-hover-color: #404bbf;
@@ -26,6 +34,8 @@
   --footer-bgr-color: #2e2f42;
   --footer-logo-studio-color: #f4f4fd;
   --footer-subtitle-color: #e7e9fc;
+  --footer-icon-bgr-color: rgba(255, 255, 255, 0.1);
+  --footer-icon-bgr-hover-focus: #31d0aa;
 
   --portfolio-btn-bgr-color-normal: #f4f4fd;
   --portfolio-btn-border: #e7e9fc;
@@ -34,7 +44,14 @@
   --portfolio-btn-content-color-hover-focus: #ffffff;
   --portfolio-cards-border-color: #e7e9fc;
   --portfolio-cards-border-hover-color: #f4f4fd;
+  --portfolio-btn-hover-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  --portfolio-link-box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+  --portfolio-link-box-hover-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 
+  --customers-item-link-color: #8e8f99;
+  --customers-item-link-border-color: #8e8f99;
   --customers-item-link-hover-color: #404bbf;
 }
 
@@ -194,21 +211,16 @@ body {
 
 /* --------------- HERO --------------- */
 .hero {
+  margin: 0 auto;
   background: var(--hero-bgr-color);
+  max-width: 1440px;
   height: 600px;
   padding-top: 188px;
   padding-bottom: 188px;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: linear-gradient(
-      to right,
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
+  background-image: var(--hero-lineral-gradient),
     url(../images/people-office.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  margin: 0;
 }
 
 .hero-title {
@@ -233,7 +245,7 @@ body {
   border: none;
   background: var(--hero-btn-bgr-color);
   color: var(--hero-btn-content-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--hero-btn-box-shadow);
 }
 
 .hero-button:hover,
@@ -285,8 +297,7 @@ body {
 .team-item-content-container {
   padding-top: 32px;
   padding-bottom: 32px;
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  box-shadow: var(--team-item-box-shadow);
   border-radius: 0px 0px 4px 4px;
 }
 .section-team-item {
@@ -336,10 +347,9 @@ body {
   align-items: center;
   width: 168px;
   height: 88px;
-  color: #8e8f99;
-  border: 1px solid #8e8f99;
+  color: var(--customers-item-link-color);
+  border: 1px solid var(--customers-item-link-border-color);
   border-radius: 4px;
-  overflow: hidden;
 }
 
 .section-customers-link:hover,
@@ -389,10 +399,13 @@ body {
   margin: 0;
 }
 
+.footer-social-media-text {
+  width: auto;
+}
+
 .footer-icon-list {
   display: flex;
   gap: 16px;
-  justify-content: left;
   margin-top: 16px;
 }
 
@@ -402,13 +415,13 @@ body {
   align-items: center;
   width: 40px;
   height: 40px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--footer-icon-bgr-color);
   border-radius: 50%;
 }
 
 .footer-icon-link:hover,
 .footer-icon-link:focus {
-  background-color: #31d0aa;
+  background-color: var(--footer-icon-bgr-hover-focus);
 }
 
 /* --------------- PORTFOLIO --------------- */
@@ -442,8 +455,7 @@ body {
 .portfolio-button:focus {
   background-color: var(--portfolio-btn-bgr-color-hover-focus);
   color: var(--portfolio-btn-content-color-hover-focus);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--portfolio-btn-hover-shadow);
   border-color: transparent;
 }
 
@@ -477,13 +489,9 @@ body {
 
 .portfolio-link {
   display: block;
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
-  width: 360px;
-  height: 420px;
 }
 
 .portfolio-link:hover,
 .portfolio-link:focus {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  box-shadow: var(--portfolio-link-box-hover-shadow);
 }
