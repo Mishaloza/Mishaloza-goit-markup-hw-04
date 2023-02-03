@@ -74,6 +74,7 @@ img {
 
 .link {
   text-decoration: none;
+  color: inherit;
 }
 
 .button {
